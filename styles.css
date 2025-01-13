@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
+/* Загальні стилі */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --title-color: blue;
+  --primary-color: #0056b3;
+  --primary-color-hover: #003d80;
+  --text-color: #333;
+  --background-color: rgba(255, 255, 255, 0.9);
+  font-family: "Righteous", serif;
+  scroll-behavior: smooth;
+  background: url("./img/cat.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+body {
+  color: var(--text-color);
+  background-color: rgba(255, 255, 255, 0.9); /* Прозорий білий фон */
+  line-height: 1.6;
+  width: 90%;
+  max-width: 600px;
+  margin: 50px auto; /* Вирівнювання по центру */
+  padding: 20px;
+  border-radius: 15px; /* Закруглені кути */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Тінь */
+}
+
+/* Заголовки */
+h1,
+h2,
+h3 {
+  text-align: center;
+  color: var(--title-color);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #0056b3;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+  display: inline-block; 
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-decoration: underline;
+}  
+
+/* Списки */
+ul,
+ol {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+/* Посилання */
+a {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Зображення */
+/* Загальні стилі для зображень */
+img {
+  display: block;
+  width: 350px; /* Встановлюємо однакову ширину для всіх зображень */
+  height: 290px; /* Встановлюємо однакову висоту для всіх зображень */
+  object-fit: cover; /* Забезпечує правильне масштабування зображення */
+  margin: 10px auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Тінь для зображень */
+}
+
+/* Специфічні стилі для cat-photos та cat-lists */
+.cat-photos__image,
+.cat-lists__image {
+  width: 300px;
+  height: 200px; /* Оновлено для однакових розмірів */
+  object-fit: cover; /* Забезпечує правильне масштабування зображення */
+  display: block;
+  margin: 10px auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Секція cat-photos */
+.cat-photos {
+  text-align: center;
+}
+
+.cat-photos p {
+  margin: 10px 0;
+}
+
+.cat-photos a {
+  display: inline-block;
+}
+
+/* Секція cat-lists */
+.cat-lists {
+  text-align: center;
+}
+
+.cat-lists ul,
+.cat-lists ol {
+  display: inline-block;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.cat-lists figure {
+  text-align: center;
+}
+
+.cat-lists figcaption {
+  margin-top: 5px;
+  font-style: italic;
+}
+
+/* Фігури */
+figure {
+  margin: 20px auto;
+  text-align: center;
+}
+
+figcaption {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Форма */
+.form-section h2 {
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 350px; /* Встановлюємо однакову ширину для форми */
+  height: 290px; /* Висота не обмежена, щоб форма могла містити більше контенту */
+  margin: 0 auto; /* Центрування форми */
+  padding: 20px;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тінь */
+  overflow: hidden; /* Забезпечує, щоб елементи не виходили за межі форми */
+}
+
+.form__title {
+  font-size: 2rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #0056b3;
+  padding-bottom: 5px;
+  text-align: center; 
+  width: 100%; 
+  border-bottom: 0;
+}
+
+.form__legend {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.form__input-text {
+  padding: 10px; 
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%; /* 100% ширина для елемента */
+}
+
+.form__button {
+  padding: 10px 0; /* Встановлюємо висоту кнопки */
+  font-size: 1rem;
+  border-radius: 5px;
+  background-color: #0056b3;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 80%;
+  align-self: center; /* Центрування кнопки */
+}
+
+.form__button:hover {
+  background-color: #003d80;
+}
+
+/* Прибираємо рамку у запитаннях */
+.form__fieldset {
+  border: none;
+  padding: 0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+footer a {
+  color: #0056b3;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
